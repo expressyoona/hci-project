@@ -3,7 +3,7 @@ import { Button, Input, Select, PageHeader } from "antd";
 
 import HeaderStyle from "./style";
 
-export const MyHeader = () => {
+const MyHeader = () => {
 
     const { Search, Group } = Input;
     const { Option } = Select;
@@ -29,3 +29,5 @@ export const MyHeader = () => {
         </PageHeader>
     )
 }
+
+export default MyHeader;

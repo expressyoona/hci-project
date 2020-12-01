@@ -1,7 +1,8 @@
 import firebase from "firebase";
 import "firebase/database";
+import "firebase/auth";
 
-let config = {
+const config = {
     "apiKey": "AIzaSyAaZokFeFBqc86sbM5wCUT4Ct0JKk1Vdeg",
     "authDomain": "order-food-app-cee47.firebaseapp.com",
     "databaseURL": "https://order-food-app-cee47.firebaseio.com",
@@ -12,4 +13,5 @@ let config = {
 
 firebase.initializeApp(config);
 
-export default firebase.database();
+export default firebase
+//.database();

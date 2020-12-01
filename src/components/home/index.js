@@ -3,7 +3,7 @@ import { Form, Input, Button, Table, Space } from "antd";
 
 import firebase from "config/firebase-db";
 
-export const Home = () => {
+const Home = () => {
 
     const columns = [
         {
@@ -25,7 +25,7 @@ export const Home = () => {
     const [editMode, setEditMode] = useState(false);
     const [taskList, setTaskList] = useState([]);
     const [taskId, setTaskId] = useState('');
-    const db = firebase.ref('/test');
+    const db = firebase.database().ref('/test');
     
     const { Item } = Form;
     const [form] = Form.useForm();
@@ -65,7 +65,7 @@ export const Home = () => {
 
     return (
         <>
-        <h1>ToDo App</h1>
+            <h1>Firebase Database</h1>
             <Form form={form} onFinish={submitForm}>
                 <Item label="Taskname" name="taskname">
                     <Input />
@@ -80,3 +80,5 @@ export const Home = () => {
         </>
     )
 }
+
+export default Home;
