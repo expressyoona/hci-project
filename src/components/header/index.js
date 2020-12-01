@@ -1,21 +1,31 @@
 import React from 'react';
+import { Button, Input, Select, PageHeader } from "antd";
 
-import { Layout, Input, Select } from "antd";
+import HeaderStyle from "./style";
 
 export const MyHeader = () => {
-    const { Header } = Layout;
-    const { Search } = Input;
+
+    const { Search, Group } = Input;
     const { Option } = Select;
+
     return (
-        <Header >
-            <Input.Group compact>
-                <Select style={{width: '10%'}}>
-                    <Option key="1">1</Option>
+        <PageHeader style={HeaderStyle.root}>
+            
+            <Group>
+                <img src="images/logo.png" alt="Logo" width="32px" height="32px" />
+                <Select defaultValue="1">
+                    <Option key="1">Đà Nẵng</Option>
                     <Option key="2">2</Option>
                 </Select>
-                <Search style={{width: '90%'}} placeholder="Search something..." />
-            </Input.Group>
-            
-        </Header>
+                <Select defaultValue="all">
+                    <Option key="all">All categories</Option>
+                </Select>
+                <Search style={{width: '50%'}} placeholder="Search something..." />
+                <img src="images/notification.png" alt="Notification" height="20" />
+                <img src="images/cart.png" alt="Cart" height="20" />
+                <Button style={HeaderStyle.loginBtn}>Đăng nhập</Button>
+                <img src="images/en.png" alt="English" />
+            </Group>
+        </PageHeader>
     )
 }
