@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Form, Input, Button } from "antd";
 
 import firebase from "config/firebase-db";
@@ -17,7 +17,7 @@ const AdminConsole = () => {
             console.log(user.userID);
         }).catch(error => {
             console.log(error);
-        })
+        });
     }
 
 
