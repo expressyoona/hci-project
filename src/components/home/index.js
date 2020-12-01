@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import firebase from "../../config/fb";
 import { Form, Input, Button, Table, Space } from "antd";
+
+import firebase from "config/firebase-db";
 
 export const Home = () => {
 
