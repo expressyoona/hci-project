@@ -1,11 +1,12 @@
 import MyHeader from "components/header";
-import Home from "components/home";
+// import Home from "components/home";
+import LoginForm from "components/login";
 
 const App = () => {
   return (
     <div className="App">
       <MyHeader />
-      <Home />
+      <LoginForm />
     </div>
   );
 }
