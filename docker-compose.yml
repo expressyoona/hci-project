@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   sample-prod:
-    container_name: sample-prod
+    container_name: order-food-app
     build:
       context: .
       dockerfile: Dockerfile
