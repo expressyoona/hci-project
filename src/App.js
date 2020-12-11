@@ -19,9 +19,9 @@ const App = () => {
       </ul>
 
       <Switch>
-        {route.map(item => {
+        {route.map((item, index) => {
           return (
-            <Route exact={true} path={item.path}>
+            <Route key={index} exact={true} path={item.path}>
               {item.component}
             </Route>
           )
