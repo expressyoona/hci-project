@@ -3,24 +3,27 @@ const LoginFormStyle = {
         display: 'flex',
         flexDirection: 'column',
         background: '#EBEBEB',
-        height: '592px',
+        //height: '592px',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        padding: '20px 40px',
     },
     title: {
         fontSize: 18,
         letterSpacing: '0.145em',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginBottom: '30px'
     },
     quickLoginBtn: {
-        display: 'flex',
+        //display: 'flex',
         width: '540px',
         height: '35px',
         textAlign: 'center',
         color: 'white',
         fontSize: 14,
         textTransform: 'uppercase',
-        lineHeight: '22px'
+        lineHeight: '22px',
+        border: '3px'
     },
     phoneLoginBtn: {
         background: '#7FAD39'
@@ -37,8 +40,14 @@ const LoginFormStyle = {
         height: '35px',
         color: 'white',
         fontSize: 14
+    },
+    forget: {
+        float: 'right'
+    },
+    policy: {
+        textAlign: 'center'
     }
-
+    
 }
 
 export default LoginFormStyle;

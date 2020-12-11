@@ -6,9 +6,15 @@ import {
   Link
 } from "react-router-dom";
 
+import Header from "components/header";
+import Footer from "components/footer";
+
+
+
 const App = () => {
   return (      
     <Router>
+      <Header />
       <ul>
         <li>
           <Link to='/'>Index</Link>
@@ -17,7 +23,7 @@ const App = () => {
           <Link to='/admin'>Admin</Link>
         </li>
       </ul>
-
+      
       <Switch>
         {route.map((item, index) => {
           return (
@@ -27,6 +33,7 @@ const App = () => {
           )
         })}
       </Switch>
+      <Footer />
     </Router>
   );
 }

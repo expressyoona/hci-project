@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Input, Button, Form, Checkbox, Typography } from "antd";
+import { Row, Col, Input, Button, Form, Checkbox, Typography, Space } from "antd";
 
 import LoginFormStyle from "./style";
 
@@ -10,12 +10,14 @@ const LoginForm = () => {
 
     return (
         <Row >
-            <Col style={LoginFormStyle.root} span={12} offset={6} >
+            <Col style={LoginFormStyle.root} span={8} offset={8} >
                 <Text style={LoginFormStyle.title}>Đăng ký</Text>
-                <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.phoneLoginBtn }}>SỐ ĐIỆN THOẠI</Button>
-                <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.facebookLoginBtn}}>Facebook</Button>
-                <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.googleLoginBtn}}>Google</Button>
-                <Text>Hoặc đăng nhập bằng tài khoản của bạn</Text>
+                <Space direction="vertical" style={{border: '20px'}}>
+                    <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.phoneLoginBtn }}>SỐ ĐIỆN THOẠI</Button>
+                    <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.facebookLoginBtn}}>Facebook</Button>
+                    <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.googleLoginBtn}}>Google</Button>
+                </Space>
+                <Text style={{margin: '20px 0'}}>Hoặc đăng nhập bằng tài khoản của bạn</Text>
                 <Form>
                     <Form.Item name="username">
                         <Input prefix="" placeholder="Username/Email" />
@@ -25,7 +27,7 @@ const LoginForm = () => {
                     </Form.Item>
                     <Form.Item>
                         <Checkbox checked={rememberMe} onClick={() => setRememberMe(!rememberMe)}>Lưu thông tin đăng nhập</Checkbox>
-                        <a href='/forgot-password'>Quên mật khẩu?</a>
+                        <a href='/forgot-password' style={LoginFormStyle.forget}>Quên mật khẩu?</a>
                     </Form.Item>
                     <Form.Item>
                         <Button style={LoginFormStyle.loginBtn} htmlType="submit">
@@ -33,7 +35,7 @@ const LoginForm = () => {
                         </Button>
                     </Form.Item>
                 </Form>
-                <Text>
+                <Text style={LoginFormStyle.policy}>
                     Chúng tôi không sử dụng thông tin của bạn với bất kỳ mục đích nào. Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với <a href='/policy'>Chính sách quy định của ...</a>
                 </Text>
             </Col>

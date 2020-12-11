@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Input, Select, PageHeader } from "antd";
+import { Button, Input, Select, Row, Col, Space} from "antd";
 
 import HeaderStyle from "./style";
 
@@ -9,24 +9,29 @@ const Header = () => {
     const { Option } = Select;
 
     return (
-        <PageHeader style={HeaderStyle.root}>
-            
-            <Group>
-                <img src="images/logo.png" alt="Logo" width="32px" height="32px" />
+        <Row style={HeaderStyle.root} justify="space-around" align="middle">
+            <Col span={16} offset={4} >
+                <img src="images/logo.png" alt="Logo" style={HeaderStyle.logo} />
                 <Select defaultValue="1">
                     <Option key="1">Đà Nẵng</Option>
                     <Option key="2">2</Option>
                 </Select>
-                <Select defaultValue="all">
+                <Space size={-2} style={HeaderStyle.search}>
+                <Select defaultValue="all" size={"large"}>
                     <Option key="all">All categories</Option>
                 </Select>
-                <Search style={{width: '50%'}} placeholder="Search something..." />
-                <img src="images/notification.png" alt="Notification" height="20" />
-                <img src="images/cart.png" alt="Cart" height="20" />
-                <Button style={HeaderStyle.loginBtn}>Đăng nhập</Button>
-                <img src="images/en.png" alt="English" />
-            </Group>
-        </PageHeader>
+                <Search size={"large"} style={{width: '250%'}} placeholder="Nhập tên món ăn bạn muốn tìm" />
+                </Space>
+                <Space size={25} style={{float: 'right'}}>
+                    <img src="images/notification.png" alt="Notification" height="20" />
+                    <img src="images/cart.png" alt="Cart" height="20" />
+                    <Button style={HeaderStyle.loginBtn}>Đăng nhập</Button>
+                </Space>
+            </Col>
+            <Col span={4}>
+            <img src="images/en.png" alt="English" style={HeaderStyle.lang}/>
+            </Col>
+        </Row>
     )
 }
 
