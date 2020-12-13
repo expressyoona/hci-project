@@ -15,14 +15,14 @@ const App = () => {
   return (      
     <Router>
       <Header />
-      <ul>
+      {/* <ul>
         <li>
           <Link to='/'>Index</Link>
         </li>
         <li>
           <Link to='/admin'>Admin</Link>
         </li>
-      </ul>
+      </ul> */}
       
       <Switch>
         {route.map((item, index) => {

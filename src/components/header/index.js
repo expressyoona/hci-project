@@ -5,7 +5,7 @@ import HeaderStyle from "./style";
 
 const Header = () => {
 
-    const { Search, Group } = Input;
+    const { Search } = Input;
     const { Option } = Select;
 
     return (
