@@ -1,13 +1,38 @@
-import MyHeader from "components/header";
-// import Home from "components/home";
-import LoginForm from "components/login";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Header from "components/header";
+import Footer from "components/footer";
+import route from "routes";
 
 const App = () => {
   return (
-    <div className="App">
-      <MyHeader />
-      <LoginForm />
-    </div>
+    <Router>
+      <Switch>
+        {/* Admin */}
+        {route.admin.map((item, index) => {
+          return (
+            <Route key={index} exact={true} path={item.path}>
+              {item.component}
+            </Route>
+          )
+        })}
+        {/* General */}
+        {route.general.map((item, index) => {
+          return (
+            <Route key={index} exact={true} path={item.path}>
+              <Header />
+              {item.component}
+              <Footer />
+            </Route>
+          )
+        })}
+      </Switch>
+      
+    </Router>
   );
 }
 

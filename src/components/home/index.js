@@ -1,89 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { Form, Input, Button, Table, Space } from "antd";
+import React from 'react';
+import { Image, Typography, Row, Col } from "antd";
 
-import ToDoService from "services/ToDoService";
+import HomeStyle from "./styles";
+import AreYouHungry from './AreYouHungry';
+import MerchantRegistrationProcess from "./MerchantRegistrationProcess";
+import ShipperRegistration from "./ShipperRegistration";
 
 const Home = () => {
 
-    const columns = [
-        {
-            title: 'Taskname',
-            dataIndex: 'taskname',
-            key: 'id'
-        },
-        {
-            title: 'Action',
-            key: 'action',
-            render: (record) => (
-                <Space size="middle">
-                    <Button type="primary" onClick={() => turnOnEditMode(record)}>Edit</Button>
-                    <Button type="danger" onClick={() => removeTaskById(record.id)} >Delete {record.taskname}</Button>
-                </Space>
-            )
-        }
-    ]
-    const [editMode, setEditMode] = useState(false);
-    const [taskList, setTaskList] = useState([]);
-    const [taskId, setTaskId] = useState('');
-    
-    const { Item } = Form;
-    const [form] = Form.useForm();
-
-    const turnOnEditMode = (task) => {
-        setEditMode(true);
-        form.setFieldsValue({ taskname: task.taskname });
-        setTaskId(task.id);
-    }
-
-    const submitForm = values => {
-        if (editMode) {
-            // Update current task
-            ToDoService.update(taskId, values);
-            setEditMode(false);
-        } else {
-            // Add new task
-            ToDoService.create(values);
-        }
-        form.resetFields();
-    }
-
-    const onDataChange = (tasks) => {
-        const list = [];
-        tasks.forEach(task => {
-            list.push({
-                id: task.key,
-                taskname: task.val().taskname
-            })
-        });
-        setTaskList(list);
-    };
-
-    const removeTaskById = (taskId) => {
-        ToDoService.remove(taskId);
-    }
-
-    useEffect(() => {
-        ToDoService.getAll().on('value', onDataChange);
-
-        return () => {
-            ToDoService.getAll().off('value', onDataChange);
-        }
-    }, []);
+    const { Title } = Typography;
 
     return (
         <>
-            <h1>Firebase Database</h1>
-            <Form form={form} onFinish={submitForm}>
-                <Item label="Taskname" name="taskname">
-                    <Input placeholder="Enter your taskname here" />
-                </Item>
-                <Item>
-                    <Button type="primary" htmlType="submit">
-                        {editMode ? "Save" : "Add task"}
-                    </Button>
-                </Item>
-            </Form>
-            <Table columns={columns} dataSource={taskList} rowKey="id" />
+            <AreYouHungry />
+            <Typography>
+                <Title style={HomeStyle.title}>Sử dụng .............. như thế nào ?</Title>
+                <Title style={{...HomeStyle.title, ...HomeStyle.title2}}>VÔ CÙNG DỄ DÀNG</Title>
+            </Typography>
+            <Row>
+                <Col span={16} offset={4}>
+                    <Image src="images/home/purchasing-process.png"/>
+                </Col>
+            </Row>
+            <MerchantRegistrationProcess />
+            <ShipperRegistration />    
         </>
     )
 }
