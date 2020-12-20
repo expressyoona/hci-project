@@ -40,6 +40,9 @@ const RestaurantStyle = {
 
     // TopReview
     toprev: {
+        marginBottom: "30px"
+    },
+    toprevHead: {
         marginTop: '20px',
         borderBottom: '1px solid #000'
     },
@@ -60,8 +63,34 @@ const RestaurantStyle = {
         borderRadius: "4px",
         fontSize: "16px",
         padding: "2px 8px"
-    }
+    },
 
+    // RestaurantMenu
+    menuRoot: {
+        background: "#F2F2F2",
+        paddingTop: "40px"
+    },
+    menuSidebar: {
+        background: "#FFF",
+        marginRight: "40px",
+        borderRadius: "5px"
+    },
+    menuSidebarItem: {
+        fontSize: "16px",
+        textTransform: "uppercase",
+        padding: "5px 5px",
+        marginLeft: "15px"
+    },
+    menu: {
+        background: "#FFF",
+        borderRadius: "5px",
+        padding: "10px 20px"
+    },
+
+    // MenuItem
+    menuItem: {
+        height: "120px"
+    }
 }
 
 export default RestaurantStyle;

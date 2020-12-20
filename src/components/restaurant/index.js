@@ -4,6 +4,7 @@ import { Breadcrumb, Row, Col, Typography, List } from "antd";
 import RestaurantStyle from "./style";
 import RestaurantDetail from "./RestaurantDetail";
 import TopReviewItem from "./TopReviewItem";
+import RestaurantMenu from "./RestaurantMenu";
 
 const data = [
     {
@@ -50,7 +51,7 @@ const Restaurant = () => {
 
     return (
         <>
-        <Row gutter={[10, 25]}>
+        <Row>
             <Col span={16} offset={4}>
                 <Breadcrumb>
                     <Breadcrumb.Item>Trang chủ</Breadcrumb.Item>
@@ -60,15 +61,14 @@ const Restaurant = () => {
             </Col>
         </Row>
         <RestaurantDetail />
-        <Row>
+        <Row style={RestaurantStyle.toprev}>
             <Col span={16} offset={4}>
-                <div style={RestaurantStyle.toprev}>
+                <div style={RestaurantStyle.toprevHead}>
                     <Text style={RestaurantStyle.toprevTitle}>Top đánh giá</Text>
                     <Text style={RestaurantStyle.toprevAll}>Xem tất cả</Text>
                 </div>
                 <List
                     grid={{
-                        gutter: [50],
                         column: 4
                     }}
                     dataSource={data}
@@ -82,6 +82,7 @@ const Restaurant = () => {
                 />
             </Col>
         </Row>
+        <RestaurantMenu />
         </>
     )
 }

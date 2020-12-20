@@ -8,7 +8,7 @@ const RestaurantDetail = () => {
     const { Text, Title } = Typography;
     
     return (
-        <Row gutter={30}>
+        <Row gutter={30} style={{margin: 'auto 0px'}}>
             <Col span={8} offset={4}>
                 <Image src="images/restaurant/PLCoffeeTea.png" />
             </Col>
