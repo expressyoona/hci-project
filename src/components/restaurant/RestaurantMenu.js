@@ -4,7 +4,6 @@ import { SearchOutlined } from "@ant-design/icons";
 
 import RestaurantStyle from "./style";
 import MenuItem from "./MenuItem";
-import "./style.css";
 
 const data = [
     {
@@ -64,14 +63,14 @@ const RestaurantMenu = () => {
                 </Space>
             </Col>
             <Col span={13} style={RestaurantStyle.menu}>
-                <Space>
-                    <Input size="large"  style={{ width: '100%' }} allowClear placeholder="Tìm kiếm món ăn trong menu" prefix={<SearchOutlined style={{color: "#BFBFBF"}} />} />
+                <div style={RestaurantStyle.menuMain}>
+                    <Input size="large" style={RestaurantStyle.searchBar} allowClear placeholder="Tìm kiếm món ăn trong menu" prefix={<SearchOutlined style={{color: "#BFBFBF"}} />} />
                     <Select defaultValue="Sắp xếp theo" size="large" onChange={handleChange}>
                         <Option value="price1">Giá (từ cao tới thấp)</Option>
                         <Option value="price2">Giá (từ thấp tới cao)</Option>
                     </Select>
-                </Space>
-                <MenuItem Img="images/restaurant/menu/KhoaiTayChien.png" Name="KHOAI TAY CHIEN" Order="So lan dat hang tren 100 lan" Price="20000" />
+                </div>
+                <MenuItem Img="images/restaurant/menu/KhoaiTayChien.png" Name="Khoai Tây Chiên" Order="100+" Price="20.000 VNĐ" />
             </Col>
         </Row>
     )

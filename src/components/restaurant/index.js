@@ -51,7 +51,7 @@ const Restaurant = () => {
 
     return (
         <>
-        <Row>
+        <Row style={{padding: "0 0 15px 15px"}}>
             <Col span={16} offset={4}>
                 <Breadcrumb>
                     <Breadcrumb.Item>Trang chủ</Breadcrumb.Item>

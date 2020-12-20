@@ -84,12 +84,36 @@ const RestaurantStyle = {
     menu: {
         background: "#FFF",
         borderRadius: "5px",
-        padding: "10px 20px"
+        padding: "20px 20px"
+    },
+    menuMain: {
+        width: "100%",
+        display: "inline-flex"
+    },
+    searchBar: {
+        marginRight: "20px"
     },
 
     // MenuItem
     menuItem: {
-        height: "120px"
+        marginTop: "20px"
+    },
+    menuItemImg: {
+        //marginRight: "20px"
+    },
+    menuItemTitle: {
+        fontSize: "18px",
+        textTransform: "uppercase",
+        fontWeight: "bold"
+    },
+    menuItemOrder: {
+        fontSize: "13px"
+    },
+    menuItemPrice: {
+        fontSize: "18px",
+        textTransform: "uppercase",
+        fontWeight: "bold",
+        marginRight: "20px"
     }
 }
 
