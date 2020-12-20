@@ -1,4 +1,3 @@
-import route from "routes";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,32 +6,32 @@ import {
 
 import Header from "components/header";
 import Footer from "components/footer";
-
-
+import route from "routes";
 
 const App = () => {
-  return (      
+  return (
     <Router>
-      <Header />
-      {/* <ul>
-        <li>
-          <Link to='/'>Index</Link>
-        </li>
-        <li>
-          <Link to='/admin'>Admin</Link>
-        </li>
-      </ul> */}
-      
       <Switch>
-        {route.map((item, index) => {
+        {/* Admin */}
+        {route.admin.map((item, index) => {
           return (
             <Route key={index} exact={true} path={item.path}>
               {item.component}
             </Route>
           )
         })}
+        {/* General */}
+        {route.general.map((item, index) => {
+          return (
+            <Route key={index} exact={true} path={item.path}>
+              <Header />
+              {item.component}
+              <Footer />
+            </Route>
+          )
+        })}
       </Switch>
-      <Footer />
+      
     </Router>
   );
 }
