@@ -9,7 +9,7 @@ const Dish = ({Name, TotalAddress, Img}) => {
 
     return (
         <Space direction="vertical" size={5} style={HomeStyle.dish}>
-            <Image src={Img} style={HomeStyle.dishImage}></Image>
+            <Image src={Img} preview={false} style={HomeStyle.dishImage}></Image>
             <Text style={HomeStyle.dishName}>{Name}</Text>
             <Text style={HomeStyle.dishTotalAddress}>{TotalAddress} địa chỉ</Text>
         </Space>

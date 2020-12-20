@@ -17,10 +17,10 @@ const Header = () => {
                     <Option key="2">2</Option>
                 </Select>
                 <Space size={-2} style={HeaderStyle.search}>
-                <Select defaultValue="all" size={"large"}>
+                <Select defaultValue="all" size={"large"} bordered>
                     <Option key="all">All categories</Option>
                 </Select>
-                <Search size={"large"} style={{width: '250%'}} placeholder="Nhập tên món ăn bạn muốn tìm" />
+                <Search size={"large"} bordered allowClear="true" style={{width: '250%'}} placeholder="Nhập tên món ăn bạn muốn tìm" />
                 </Space>
                 <Space size={25} style={{float: 'right'}}>
                     <img src="images/notification.png" alt="Notification" height="20" />

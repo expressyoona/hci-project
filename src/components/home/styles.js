@@ -28,7 +28,7 @@ const HomeStyle = {
     dish: {
         backgroundColor: '#7FAD39',
         borderRadius: '12px',
-        paddingBottom: '20px'
+        paddingBottom: '10px'
     },
     dishImage: {
         height: '190px',
