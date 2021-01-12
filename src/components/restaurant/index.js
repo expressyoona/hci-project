@@ -5,6 +5,7 @@ import RestaurantStyle from "./style";
 import RestaurantDetail from "./RestaurantDetail";
 import TopReviewItem from "./TopReviewItem";
 import RestaurantMenu from "./RestaurantMenu";
+import Review from "./Review";
 
 const data = [
     {
@@ -83,6 +84,7 @@ const Restaurant = () => {
             </Col>
         </Row>
         <RestaurantMenu />
+        <Review />
         </>
     )
 }

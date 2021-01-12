@@ -68,7 +68,7 @@ const RestaurantStyle = {
     // RestaurantMenu
     menuRoot: {
         background: "#F2F2F2",
-        paddingTop: "40px"
+        padding: "40px 0"
     },
     menuSidebar: {
         background: "#FFF",
@@ -93,15 +93,26 @@ const RestaurantStyle = {
     searchBar: {
         marginRight: "20px"
     },
+    dishName: {
+        fontSize: "16px",
+        textTransform: "uppercase",
+        paddingTop: "15px",
+        marginBottom: "0"
+    },
 
     // MenuItem
     menuItem: {
-        marginTop: "20px"
+        width: "100%",
+        display: "inline-flex",
+        alignItems: "center"
     },
     menuItemImg: {
-        //marginRight: "20px"
+        marginRight: "20px"
     },
     menuItemTitle: {
+        marginLeft: "20px" 
+    },
+    menuItemName: {
         fontSize: "18px",
         textTransform: "uppercase",
         fontWeight: "bold"
@@ -114,6 +125,32 @@ const RestaurantStyle = {
         textTransform: "uppercase",
         fontWeight: "bold",
         marginRight: "20px"
+    },
+
+    // Review
+    revTitle: {
+        fontSize: "24px",
+        textAlign: "center",
+        padding: "10px 0"
+    },
+
+    // ReviewPoint
+    revp: {
+        
+    },
+    revpCount: {
+        fontSize: "14px",
+        fontWeight: "500",
+        height: "100%",
+        padding: "0",
+        margin: "0"
+    },
+    revpPoint: {
+        fontSize: "30px",
+        fontWeight: "500",
+        height: "100%",
+        padding: "0",
+        margin: "0"
     }
 }
 
