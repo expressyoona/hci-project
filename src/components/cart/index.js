@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb, Row, Col, Image, Typography, Input, InputNumber, Button } from "antd";
+import { Breadcrumb, Row, Col, Image, Typography, InputNumber, Button } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 
 import CartStyle from "./style";
@@ -49,7 +49,7 @@ const Cart = () => {
                         <th>Cửa hàng</th>
                         <th>Giá tiền</th>
                         <th>Số lượng</th>
-                        <th>Tổng</th>
+                        <th>Thành tiền</th>
                         <th></th>
                     </thead>
                     {data.map(item => {

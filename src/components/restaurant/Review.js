@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Row, Col, Typography } from "antd";
 
 import RestaurantStyle from "./style";
@@ -6,7 +6,7 @@ import ReviewPoint from "./ReviewPoint";
 
 const Review = () => {
 
-    const { Title, Text } = Typography;
+    const { Title } = Typography;
 
     return (
         <Row>

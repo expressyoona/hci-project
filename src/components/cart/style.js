@@ -3,7 +3,8 @@ const CartStyle = {
     breadcrumb: {
         fontWeight: 'bold'
     },
-
+    
+    // Table
     foodName: {
         marginLeft: "20px"
     },
@@ -27,6 +28,8 @@ const CartStyle = {
     refreshButton: {
         float: "right"
     },
+
+    // Discount and Bill 
     bill: {
         marginTop: "10px"
     },
