@@ -12,19 +12,29 @@ const ReviewPoint = () => {
                 <p style={RestaurantStyle.revpPoint}>4.9</p>
                 <Rate allowHalf disabled defaultValue={5} />
             </div>
-            <div style={{display: "grid", borderLeft: "1px solid #000", padding: "0 20px"}}>
-                <Rate allowHalf disabled defaultValue={5} />
-                <Rate allowHalf disabled defaultValue={4} />
-                <Rate allowHalf disabled defaultValue={3} />
-                <Rate allowHalf disabled defaultValue={2} />
-                <Rate allowHalf disabled defaultValue={1} />
-            </div>
-            <div>
-                <Progress percent={70} size="small" />
-                <Progress percent={70} size="small" />
-                <Progress percent={70} size="small" />
-                <Progress percent={70} size="small" />
-                <Progress percent={70} size="small" />
+            <div style={{borderLeft: "1px solid #000", padding: "0 20px"}}>
+                <ul>
+                    <li style={{display: "inline-block"}}>
+                        <Rate allowHalf disabled defaultValue={5} />
+                        <Progress percent={70} size="small" />
+                    </li>
+                    <li style={{display: "inline-block"}}>
+                        <Rate allowHalf disabled defaultValue={4} />
+                        <Progress percent={70} size="small" />
+                    </li>
+                    <li style={{display: "inline-block"}}>
+                        <Rate allowHalf disabled defaultValue={3} />
+                        <Progress percent={70} size="small" />
+                    </li>
+                    <li style={{display: "inline-block"}}>
+                        <Rate allowHalf disabled defaultValue={2} />
+                        <Progress percent={70} size="small" />
+                    </li>
+                    <li style={{display: "inline-block"}}>
+                        <Rate allowHalf disabled defaultValue={1} />
+                        <Progress percent={70} size="small" />
+                    </li>
+                </ul>
             </div>
         </Space>
         </>
