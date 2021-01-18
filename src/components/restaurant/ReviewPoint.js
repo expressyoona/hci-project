@@ -14,7 +14,7 @@ const ReviewPoint = () => {
             </div>
             <div style={{borderLeft: "1px solid #000", padding: "0 20px"}}>
                 <ul>
-                    <li style={{display: "inline-block"}}>
+                    <li style={{display: "inline-block !important"}}>
                         <Rate allowHalf disabled defaultValue={5} />
                         <Progress percent={70} size="small" />
                     </li>

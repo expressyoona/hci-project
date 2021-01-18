@@ -145,6 +145,27 @@ const CheckOutStyle = {
         fontWeight: "700",
         textTransform: "uppercase",
         letterSpacing: "0.14em",
+    },
+
+    // Add Address
+    add: {
+        
+    },
+    addTitle: {
+        fontSize: "24px",
+        fontWeight: "700",
+        borderBottom: "1px solid #EBEBEB",
+        padding: "20px 0"
+    },
+    form: {
+        width: "80%"
+    },
+    addButton: {
+        background: "#7FAD39",
+        borderRadius: "4px",
+        textTransform: "uppercase",
+        border: "none",
+        fontWeight: "400"
     }
 }
 
