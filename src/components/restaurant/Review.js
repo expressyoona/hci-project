@@ -13,6 +13,7 @@ const Review = () => {
             <Col span={8} offset={8} style={{margin: "auto", width: "50%"}}>
                 <Title style={RestaurantStyle.revTitle}>Đánh giá</Title>
                 <ReviewPoint />
+                {/* <RateCount count={5} /> */}
             </Col>
         </Row>
     )

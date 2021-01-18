@@ -1,0 +1,13 @@
+.is_animating {
+    background-color: black !important;
+    animation: heart-burst 2.8s steps(28) 1 !important;
+}
+
+@keyframes heart-burst {
+    from {
+        background-position:left !important;
+    }
+    to {
+        background-position:right !important;
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Rate, Space, Progress } from "antd";
 
+import RateCount from "./RateCount";
 import RestaurantStyle from "./style";
 
 const ReviewPoint = () => {
@@ -13,28 +14,10 @@ const ReviewPoint = () => {
                 <Rate allowHalf disabled defaultValue={5} />
             </div>
             <div style={{borderLeft: "1px solid #000", padding: "0 20px"}}>
-                <ul>
-                    <li style={{display: "inline-block !important"}}>
-                        <Rate allowHalf disabled defaultValue={5} />
-                        <Progress percent={70} size="small" />
-                    </li>
-                    <li style={{display: "inline-block"}}>
-                        <Rate allowHalf disabled defaultValue={4} />
-                        <Progress percent={70} size="small" />
-                    </li>
-                    <li style={{display: "inline-block"}}>
-                        <Rate allowHalf disabled defaultValue={3} />
-                        <Progress percent={70} size="small" />
-                    </li>
-                    <li style={{display: "inline-block"}}>
-                        <Rate allowHalf disabled defaultValue={2} />
-                        <Progress percent={70} size="small" />
-                    </li>
-                    <li style={{display: "inline-block"}}>
-                        <Rate allowHalf disabled defaultValue={1} />
-                        <Progress percent={70} size="small" />
-                    </li>
-                </ul>
+                {Array.from({ length: 5 }).map((item, index) => {
+                        return <RateCount count={5 - index} />
+                    }
+                )}
             </div>
         </Space>
         </>

@@ -72,7 +72,7 @@ const RestaurantMenu = () => {
             })
         });
         setFoodList(list);
-        console.log(foodList);
+        // console.log(foodList);
     }
 
 
