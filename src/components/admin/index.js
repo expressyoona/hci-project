@@ -21,7 +21,7 @@ const AdminConsole = () => {
                 <AdminHeader />
                 <Content>
                     {/* Render content here */}
-                    <div style={{height: '2000px'}}></div>
+                    <div style={{height: '100px'}}></div>
                 </Content>
             </Layout>
         </Layout>
