@@ -9,6 +9,7 @@ import RestaurantService from "services/RestaurantService";
 const data = [
     {
         menu: "Ăn vặt",
+        selected: true
     },
     {
         menu: "Trà trái cây",
@@ -81,15 +82,26 @@ const RestaurantMenu = () => {
     }
 
     return (
+        <>
+        
         <Row style={RestaurantStyle.menuRoot}>
+            <Col span={24}>
+                <Row>
+                    <Col span={3} offset={4} >
+                        <div style={{fontSize: 16, fontWeight: 'bold', textAlign: 'center', marginTop: 30, marginBottom: 19}}>
+                            MENU
+                        </div>
+                    </Col>
+            </Row>
+            </Col>
             <Col span={3} offset={4} style={RestaurantStyle.menuSidebar}>
                 <Space direction="vertical">
                     <List 
                         size="small"
                         dataSource={data}
                         renderItem={item => (
-                            <List.Item style={{border: "none"}}>
-                                <Text style={RestaurantStyle.menuSidebarItem}>{item.menu}</Text>
+                            <List.Item style={{border: "none", padding: 0, marginTop: 20, marginLeft: 36}}>
+                                <Text style={item.selected ? RestaurantStyle.menuSidebarItemSelected : RestaurantStyle.menuSidebarItem}>{item.menu}</Text>
                             </List.Item>
                         )}
                     />
@@ -144,6 +156,7 @@ const RestaurantMenu = () => {
                 />
             </Col>
         </Row>
+        </>
     )
 }
 

@@ -68,7 +68,7 @@ const RestaurantStyle = {
     // RestaurantMenu
     menuRoot: {
         background: "#F2F2F2",
-        padding: "40px 0"
+        padding: "0px 0px 40px"
     },
     menuSidebar: {
         background: "#FFF",
@@ -80,6 +80,16 @@ const RestaurantStyle = {
         textTransform: "uppercase",
         padding: "5px 5px",
         marginLeft: "15px"
+    },
+    menuSidebarItemSelected: {
+        lineHeight: '17px',
+        background: '#959595',
+        borderRadius: '7px',
+        color: 'white',
+        fontSize: "16px",
+        textTransform: "uppercase",
+        padding: "4px 6px 5px 7px",
+        marginLeft: "15px",
     },
     menu: {
         background: "#FFF",
