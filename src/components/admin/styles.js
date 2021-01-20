@@ -8,7 +8,8 @@ const HeaderStyle = {
         borderBottom: "1px solid #EFEFEF",
         position: "fixed",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        zIndex: 9
     },
     collapseButton: {
         cursor: 'pointer',
@@ -28,7 +29,8 @@ const SiderStyle = {
     root: {
         position: 'fixed',
         height: '100%',
-        borderRight: "1px solid #EFEFEF"
+        borderRight: "1px solid #EFEFEF",
+        zIndex: 10
     },
     siderLogo: {
         display: "flex",
@@ -70,7 +72,14 @@ const SiderStyle = {
 
 const AdminStyle = {
     HeaderStyle,
-    SiderStyle
+    SiderStyle,
+    ContentRoot: {
+        width: "calc(100% - 320px)",
+        height: "calc(100% - 82px)",
+        position: "absolute",
+        right: 0,
+        bottom: 0
+    }
 }
 
 export default AdminStyle;

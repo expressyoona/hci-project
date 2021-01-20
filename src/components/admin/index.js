@@ -3,6 +3,8 @@ import { Layout } from "antd";
 
 import AdminSider from "./AdminSider";
 import AdminHeader from "./AdminHeader";
+import RestaurantContent from "./restaurant_content/RestaurantContent";
+import AdminStyle from "./styles";
 // import firebase from "config/firebase-db";
 
 
@@ -19,9 +21,8 @@ const AdminConsole = () => {
             <AdminSider />
             <Layout>
                 <AdminHeader />
-                <Content>
-                    {/* Render content here */}
-                    <div style={{height: '100px'}}></div>
+                <Content style={AdminStyle.ContentRoot}>
+                    <RestaurantContent />
                 </Content>
             </Layout>
         </Layout>

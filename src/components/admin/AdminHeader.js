@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Space } from "antd";
+import { Layout, Space, Avatar } from "antd";
 import { MenuOutlined, AlignLeftOutlined, BellOutlined, MailOutlined, SettingOutlined } from "@ant-design/icons";
 
 import AdminStyle from "./styles";
@@ -16,6 +16,7 @@ const AdminHeader = () => {
                 <AlignLeftOutlined style={HeaderStyle.headerIcon} />
                 <BellOutlined style={HeaderStyle.headerIcon} />
                 <MailOutlined style={HeaderStyle.headerIcon} />
+                <Avatar size={70} src="images/admin-image.png" />
                 <SettingOutlined style={HeaderStyle.headerIcon} />
             </Space>
         </Header>
