@@ -1,11 +1,27 @@
 import React from "react";
-import { Row, Col, Breadcrumb, Typography, Form, Input, Select, Button } from "antd";
+import { Modal, Row, Col, Breadcrumb, Typography, Form, Input, Select, Button } from "antd";
+import { useHistory } from "react-router";
 
+import Province from "resources/provinces.json";
+import MerchantService from "services/MerchantService";
 import MerchantRegisterStyle from "./style.js";
 
 const MerchantRegister = () => {
 
+    const history = useHistory();
     const { Title, Paragraph } = Typography;
+
+    const addNewMerchant = values => {
+        MerchantService.create(values);
+        Modal.success({
+            title: 'Đăng ký thành công',
+            content: 'Chúng tôi sẽ gửi kết quả qua email mà bạn đã đăng ký',
+            onOk() {
+                history.push('/');
+            }
+        });
+        
+    }
 
     return (
         <Row>
@@ -19,6 +35,7 @@ const MerchantRegister = () => {
                     <Paragraph style={MerchantRegisterStyle.merchantText1}>Điền vào thông tin theo mẫu sau. Lưu ý, GrabFood sẽ thu phí hoa hồng trên doanh số bán ra của Nhà hàng.</Paragraph>
                     <Paragraph style={MerchantRegisterStyle.merchantText2}>(*) Vui lòng nhập địa chỉ email chính xác.</Paragraph>
                     <Form
+                        onFinish={addNewMerchant}
                         style={MerchantRegisterStyle.form}
                         layout="vertical"
                         size="large">
@@ -37,13 +54,11 @@ const MerchantRegister = () => {
                         <Form.Item style={{ marginBottom: 0 }}>
                             <Form.Item
                                 name="city"
-                                label="Thành phố"
+                                label="Tỉnh, Thành phố"
                                 rules={[{ required: true, message: 'Vui lòng chọn thành phố!', whitespace: true }]}
                                 style={{ display: 'inline-block', width: 'calc(50% - 8px)' }}>
-                                <Select placeholder="Thành phố">
-                                    <Select.Option value="1">Đà Nẵng</Select.Option>
-                                    <Select.Option value="2">TP.Hồ Chí Minh</Select.Option>
-                                    <Select.Option value="3">Hà Nội</Select.Option>
+                                <Select placeholder="Tỉnh, Thành phố">
+                                    {Object.keys(Province).map((key) => (<Select.Option value={Province[key].code}>{Province[key].name}</Select.Option>))}
                                 </Select>
                             </Form.Item>
                             <Form.Item
@@ -59,13 +74,13 @@ const MerchantRegister = () => {
                             </Form.Item>
                         </Form.Item>
                         <Form.Item 
-                            name="street"
+                            name="address"
                             label="Địa chỉ kinh doanh"
                             rules={[{ required: true, message: 'Vui lòng điền địa chỉ của cửa hàng!', whitespace: true }]} >
                             <Input placeholder="Số nhà, tên đường" />
                         </Form.Item>
                         <Form.Item
-                            name="phonenumber"
+                            name="phoneNumber"
                             label="Số điện thoại"
                             rules={[{ required: true, message: 'Vui lòng nhập số điện thoại dùng để liên lạc với cửa hàng!', whitespace: true }]} >
                             <Input placeholder="0987 654 321" />

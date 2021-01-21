@@ -30,6 +30,12 @@ const App = () => {
             </Route>
           )
         })}
+        {/* Merchant Admin */}
+        {route.merchant.map((item, index) => (
+          <Route key={index} exact={true} path={item.path}>
+            {item.component}
+          </Route>
+        ))}
       </Switch>
       
     </Router>

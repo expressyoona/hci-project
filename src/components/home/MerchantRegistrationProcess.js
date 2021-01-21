@@ -59,7 +59,7 @@ const MerchantRegistrationProcess = () => {
             </Col>
         </Row>
         <Row justify="center">
-            <Button size="large" type="default" style={HomeStyle.button}>ĐĂNG KÝ NGAY</Button>
+            <Button href="merchant-register" size="large" type="default" style={HomeStyle.button}>ĐĂNG KÝ NGAY</Button>
         </Row>
         </>
     )
