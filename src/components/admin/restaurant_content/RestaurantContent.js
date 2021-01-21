@@ -107,7 +107,7 @@ const RestaurantContent = () => {
                     <Input allowClear size="large" style={RestaurantContentStyle.searchInput} placeholder="Nhập tên cửa hàng" />
                     <Button size="large" style={RestaurantContentStyle.searchButton}>Tìm kiếm</Button>
                 </div>
-                <Tabs defaultActiveKey="1" size="large" style={RestaurantContentStyle.tab}>
+                <Tabs defaultActiveKey="1" size="large">
                     <TabPane tab="Đang chờ" key="1">
                         {GetData("Đang chờ").map(item => {
                             return (

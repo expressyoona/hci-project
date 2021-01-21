@@ -8,8 +8,8 @@ const MerchantAdmin = () => {
 
     const { Header, Content } = Layout;
 
-    const loginWithGoogle = () => {
-    }
+    // const loginWithGoogle = () => {
+    // }
 
     return (
         <Layout style={{height: '100%', backgroundImage: 'url(images/background.jpg)'}}> 
