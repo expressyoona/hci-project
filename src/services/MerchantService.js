@@ -6,10 +6,15 @@ const getAll = () => {
     return db;
 }
 
+const getByStatus = (status) => {
+    return db.orderByChild('status').equalTo(status);
+}
+
 const create = data => {
     return db.push({
         ...data,
-        status: 'pending'
+        status: 'pending',
+        registedAt: firebase.database.ServerValue.TIMESTAMP
     });
 }
 
@@ -27,6 +32,7 @@ const removeAll = () => {
 
 const MerchantService = {
     getAll,
+    getByStatus,
     create,
     update,
     remove,
