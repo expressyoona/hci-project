@@ -13,14 +13,14 @@ const AdminSider = () => {
     return (
         <Sider trigger={null} collapsible theme="light" width={320} style={SiderStyle.root}>
             <div style={SiderStyle.siderLogo}>
-                <img src="images/logo.png" alt="Logo in Sider" style={SiderStyle.siderImgLogo} />
+                <img src="http://localhost:3000/images/logo.png" alt="Logo in Sider" style={SiderStyle.siderImgLogo} />
             </div>
             <Menu>
                 <Menu.Item key="1" icon={<HomeTwoTone style={SiderStyle.siderIcon} />} style={SiderStyle.siderItem}>
                     Trang chính
                 </Menu.Item>
                 <Menu.Item key="2" icon={<ShopTwoTone style={SiderStyle.siderIcon} />} style={SiderStyle.siderItem}>
-                    Cửa hàng
+                    <a href="admin/restaurant">Cửa hàng</a>
                 </Menu.Item>
                 <Menu.Item key="3" icon={<SnippetsTwoTone style={SiderStyle.siderIcon} />} style={SiderStyle.siderItem}>
                     Đơn hàng

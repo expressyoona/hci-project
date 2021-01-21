@@ -1,12 +1,10 @@
 import React from "react";
-import { Row, Col, Typography, Space, Rate } from "antd";
+import { Row, Col, Space, Rate } from "antd";
 
 import RestaurantStyle from "./style";
 import RatePerStar from "./RatePerStar";
 
 const RateSummary = () => {
-
-    const { Title } = Typography;
 
     return (
         <Row>

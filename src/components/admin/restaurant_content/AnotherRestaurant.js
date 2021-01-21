@@ -13,7 +13,7 @@ const AnotherRestaurant = ({Item}) => {
 
     return (
         <div style={{width: 200}}>
-            <Image style={RestaurantInfoStyle.anotherImg} src={"images/restaurant/" + Img} />
+            <Image style={RestaurantInfoStyle.anotherImg} src={"http://localhost:3000/images/restaurant/" + Img} />
             <Title style={RestaurantInfoStyle.anotherName} level={4}>{Name}</Title>
             <Text style={RestaurantInfoStyle.anotherAddress}>{Address}</Text>
         </div>

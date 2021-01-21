@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb, Typography, Space, notification } from "antd";
+import { Breadcrumb, Typography, Space } from "antd";
 
 import RestaurantContentStyle from "./style";
 import Info from "./Info";
@@ -7,15 +7,17 @@ import AnotherRestaurant from "./AnotherRestaurant";
 
 const data = [
     {
-        Img: "Starbuck.png",
-        Name: "Starbuck",
-        Address: "50 Bạch Đằng, quận Hải Châu, thành phố Đà Nẵng ",
-        Representater: "Starbuck",
-        PhoneNumber: "0999999999",
+        Img: "PLCoffeeTea_Small.png",
+        Name: "Phúc Long Tea",
+        Address: "Tầng 2, LOTTE Mart, 6 Nại Nam, P. Hòa Cường Bắc, Q. Hải Châu, Tp. Đà Nẵng",
+        Representater: "Phúc Long",
+        PhoneNumber: "099887766",
         Email: "username@domain.com",
         Cuisine: "Cafe/Beverage",
-        Status: "Đã xác nhận",
-        Time: "Đã xác nhận 1 giây trước bởi Administrator"
+        Status: "Đang chờ",
+        Time: "Đăng ký 15 phút trước"
+        // Status: "Đã xác nhận",
+        // Time: "Đã xác nhận 1 giây trước bởi Administrator"
     }
 ]
 
@@ -52,25 +54,16 @@ const anotherData = [
     },
 ]
 
-const openNotification = () => {
-    notification.success({
-        message: "Thành công",
-        description: "Đã xác nhận cửa hàng này làm đối tác.",
-        duration: 10
-    });
-};
-
 const RestaurantInfo = () => {
 
     const { RestaurantInfoStyle } = RestaurantContentStyle;
 
     const { Title } = Typography;
 
-    openNotification();
     return (
         <div style={RestaurantInfoStyle.root}>
             <Breadcrumb>
-                <Breadcrumb.Item>Cửa hàng</Breadcrumb.Item>
+                <Breadcrumb.Item href="admin/restaurant">Cửa hàng</Breadcrumb.Item>
                 <Breadcrumb.Item href="" style={RestaurantInfoStyle.breadcrumb}>Thông tin</Breadcrumb.Item>
             </Breadcrumb>
             <div style={RestaurantInfoStyle.infomation}>

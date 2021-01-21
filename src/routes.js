@@ -7,8 +7,11 @@ import CheckOut from "components/checkout/index";
 import AddAddress from "components/checkout/addaddress";
 import MerchantRegister from "components/merchant";
 
+
 // Admin
 import AdminConsole from "components/admin";
+import AdminRestaurant from "components/admin/restaurant_content/index";
+import AdminRestaurantInfo from "components/admin/restaurant_content/indexInfo";
 
 // Merchant Admin
 import MerchantAdmin from "components/admin-merchant";
@@ -24,7 +27,9 @@ const route = {
         { path: '/merchant-register', component: <MerchantRegister />}
     ],
     admin: [
-        { path: '/admin', component: <AdminConsole /> }
+        { path: '/admin', component: <AdminConsole /> },
+        { path: '/admin/restaurant', component: <AdminRestaurant /> },
+        { path: '/admin/restaurant/detail', component: <AdminRestaurantInfo /> }
     ],
     merchant: [
         { path: '/merchant-admin', component: <MerchantAdmin />}

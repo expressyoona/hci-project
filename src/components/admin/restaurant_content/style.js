@@ -78,6 +78,9 @@ const RestaurantInfoStyle = {
         fontSize: 28,
         marginBottom: 0
     },
+    infoAddress: {
+        width: 550
+    },
     time: {
         position: "absolute",
         right: 0,

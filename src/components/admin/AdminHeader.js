@@ -16,7 +16,7 @@ const AdminHeader = () => {
                 <AlignLeftOutlined style={HeaderStyle.headerIcon} />
                 <BellOutlined style={HeaderStyle.headerIcon} />
                 <MailOutlined style={HeaderStyle.headerIcon} />
-                <Avatar size={70} src="images/admin-image.png" />
+                <Avatar size={70} src="http://localhost:3000/images/admin-image.png" />
                 <SettingOutlined style={HeaderStyle.headerIcon} />
             </Space>
         </Header>
