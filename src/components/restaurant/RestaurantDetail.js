@@ -1,9 +1,14 @@
 import React from "react";
 import { Row, Col, Image, Typography, Rate, Space } from "antd";
 import { ClockCircleTwoTone, DollarCircleTwoTone, FacebookFilled } from "@ant-design/icons";
+import { useSelector } from "react-redux";
+
 import RestaurantStyle from "./style";
 
 const RestaurantDetail = () => {
+
+    const restaurant = useSelector(state => state.restaurant);
+    console.log('res',restaurant);
 
     const { Text, Title } = Typography;
     
@@ -11,13 +16,13 @@ const RestaurantDetail = () => {
         <>
         <Row gutter={30} style={{margin: "auto 0px"}} align="bottom">
             <Col span={8} offset={4}>
-                <Image src="images/restaurant/PLCoffeeTea.png" />
+                <Image src="/images/restaurant/PLCoffeeTea.png" />
             </Col>
             <Col span={8}>
                 <Space direction="vertical" style={{width: '100%'}}>
                     <Text style={RestaurantStyle.resType} >Coffee/Dessert</Text>
-                    <Title style={RestaurantStyle.resName}>PL Coffee & Tea</Title>
-                    <Text strong >28 Lê Đình Dương, P. Phước Ninh, Quận Hải Châu, Đà Nẵng</Text>
+                    <Title style={RestaurantStyle.resName}>{restaurant.restaurantName}</Title>
+                    <Text strong >{restaurant.address}</Text>
                     <div>
                         <Rate disabled defaultValue={5} />
                         <Text style={RestaurantStyle.resReviewCount}>(18 đánh giá)</Text>

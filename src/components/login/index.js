@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Input, Button, Form, Checkbox, Typography, Space, Modal } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 import { signInWithGoogle, signInWithFacebook } from "config/firebase-db";
 import LoginFormStyle from "./style";
@@ -12,7 +12,6 @@ const LoginForm = () => {
     const [rememberMe, setRememberMe] = useState(true);
     const user = useSelector(state => state.user);
 
-    const history = useHistory();
     const dispath = useDispatch();
 
     const loginSuccess = (user) => {

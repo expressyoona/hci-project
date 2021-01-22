@@ -18,7 +18,7 @@ const RateSummary = () => {
                         </div>
                         <div style={{borderLeft: "1px solid #000", padding: "0 29px"}}>
                             {Array.from({ length: 5 }).map((item, index) => {
-                                    return <RatePerStar count={5 - index} percent={70} />
+                                    return <RatePerStar key={index} count={5 - index} percent={70} />
                                 }
                             )}
                         </div>

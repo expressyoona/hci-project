@@ -141,9 +141,9 @@ const RestaurantMenu = () => {
                         <p style={RestaurantStyle.dishName}>{item.dishName}</p>
                         {item.foodList.map((item, index) => {
                             return (
-                                <List.Item>
+                                <List.Item key={index}>
                                     <MenuItem 
-                                        Img={"images/restaurant/menu/" + item.Img}
+                                        Img={"/images/restaurant/menu/" + item.Img}
                                         Name={item.Name}
                                         Order={item.Order}
                                         Price={item.Price}

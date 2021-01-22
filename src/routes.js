@@ -25,7 +25,7 @@ const route = {
     general: [
         { path: '/', component: <Home /> },
         { path: '/login', component: <LoginForm /> },    
-        { path: '/restaurant', component: <Restaurant />},
+        { path: '/restaurant/:slug', component: <Restaurant />},
         { path: '/cart', component: <Cart />},
         { path: '/checkout', component: <CheckOut />},
         { path: '/addaddress', component: <AddAddress />},

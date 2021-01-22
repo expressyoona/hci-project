@@ -45,7 +45,7 @@ const Header = () => {
         <Row style={HeaderStyle.root} justify="space-around" align="middle">
             <Col span={16} offset={4} >
                 <Link to="/">
-                    <img src="images/logo.png" alt="Logo" style={HeaderStyle.logo} />
+                    <img src="/images/logo.png" alt="Logo" style={HeaderStyle.logo} />
                 </Link>
                 <Select defaultValue="48">
                 {Object.keys(Province).map((key, index) => (<Select.Option key={index} value={Province[key].code}>{Province[key].name}</Select.Option>))}

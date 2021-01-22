@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import { Breadcrumb, Row, Col, Typography, List } from "antd";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
+import MerchantService from "services/MerchantService";
 import RestaurantStyle from "./style";
 import RestaurantDetail from "./RestaurantDetail";
 import TopReviewItem from "./TopReviewItem";
@@ -50,6 +53,26 @@ const Restaurant = () => {
 
     const { Text, Title } = Typography;
 
+    const restaurant = useSelector(state => state.restaurant);
+    const dispatch = useDispatch();
+    const { slug } = useParams();
+    
+
+    const handleData = useCallback((snapshot) => {
+        snapshot.forEach(t => {
+            // console.log(t.val());
+            dispatch({ type: 'LOADED_RESTAURANT', payload: t.val()})
+        })
+    }, [dispatch]);
+
+    useEffect(() => {
+        MerchantService.getAll().orderByChild('slug').equalTo(slug).once('value', handleData);
+
+        return () => {
+            MerchantService.getAll().orderByChild('slug').equalTo(slug).off('value', handleData);
+        }
+    }, [slug, handleData]);
+
     return (
         <>
         <Row style={{padding: "0 0 15px 15px"}}>
@@ -57,7 +80,7 @@ const Restaurant = () => {
                 <Breadcrumb>
                     <Breadcrumb.Item>Trang chủ</Breadcrumb.Item>
                     <Breadcrumb.Item>Cửa hàng</Breadcrumb.Item>
-                    <Breadcrumb.Item href="" style={RestaurantStyle.breadcrumb}>PL Coffee & Tea</Breadcrumb.Item>
+                    <Breadcrumb.Item href="" style={RestaurantStyle.breadcrumb}>{restaurant.restaurantName}</Breadcrumb.Item>
                 </Breadcrumb>
             </Col>
         </Row>
@@ -73,8 +96,8 @@ const Restaurant = () => {
                         column: 4
                     }}
                     dataSource={data}
-                    renderItem={item => (
-                        <List.Item>
+                    renderItem={(item, index) => (
+                        <List.Item key={index}>
                             <TopReviewItem 
                                 Item={item}
                             />

@@ -30,45 +30,45 @@ const App = () => {
 
   return (
     <Provider store={store}>
-    <Router>
-      <Switch>
-        {/* Admin */}
-        {route.admin.map((item, index) => {
-          return (
-            <Route key={index} exact={true} path={item.path}>
-              <Layout>
-                <AdminSider />
+      <Router>
+        <Switch>
+          {/* Admin */}
+          {route.admin.map((item, index) => {
+            return (
+              <Route key={index} exact={true} path={item.path}>
                 <Layout>
-                  <AdminHeader />
-                  <Content style={AdminStyle.ContentRoot}>
-                    {item.component}
-                  </Content>
+                  <AdminSider />
+                  <Layout>
+                    <AdminHeader />
+                    <Content style={AdminStyle.ContentRoot}>
+                      {item.component}
+                    </Content>
+                  </Layout>
                 </Layout>
-              </Layout>
-              
-            </Route>
-          )
-        })}
-        {/* General */}
-        {route.general.map((item, index) => {
-          return (
+                
+              </Route>
+            )
+          })}
+          {/* General */}
+          {route.general.map((item, index) => {
+            return (
+              <Route key={index} exact={true} path={item.path}>
+                <Header />
+                {item.component}
+                <Footer />
+              </Route>
+            )
+          })}
+          {/* Merchant Admin */}
+          {route.merchant.map((item, index) => (
             <Route key={index} exact={true} path={item.path}>
-              <Header />
               {item.component}
-              <Footer />
             </Route>
-          )
-        })}
-        {/* Merchant Admin */}
-        {route.merchant.map((item, index) => (
-          <Route key={index} exact={true} path={item.path}>
-            {item.component}
-          </Route>
-        ))}
-        <Route component={PageNotFound} />
-      </Switch>
-      
-    </Router>
+          ))}
+          <Route component={PageNotFound} />
+        </Switch>
+        
+      </Router>
     </Provider>
   );
 }

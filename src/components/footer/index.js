@@ -12,7 +12,7 @@ const Footer = () => {
         <>
         <Row style={FooterStyle.root}>
             <Col span={4} offset={4}>
-                <img src="images/logo.png" alt="Logo" style={FooterStyle.logo} />
+                <img src="/images/logo.png" alt="Logo" style={FooterStyle.logo} />
                 <Space direction="vertical" style={{fontSize: '16px'}}>
                     <Text>Điện thoại : 0912 3456 78</Text>
                     <Text>Email: contact@email.com</Text>

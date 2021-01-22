@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Typography, List } from "antd";
 
-import HomeStyle from "./styles";
+// import HomeStyle from "./styles";
 import RestaurantItem from "./RestaurantItem";
 
 const Data = [
