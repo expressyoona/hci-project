@@ -7,7 +7,7 @@ const FooterStyle = {
     },
     logo: {
         width: '127px',
-        height: '50px',
+        height: '127px',
         margin: '62px 100px 40px 0'
     },
     cp: {
