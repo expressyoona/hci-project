@@ -1,4 +1,4 @@
-const UserContentStyle = {
+const OrderContentStyle = {
     root: {
         padding: "20px 50px 20px 40px"
     },
@@ -6,9 +6,8 @@ const UserContentStyle = {
         fontWeight: "bold"
     },
     table: {
-        fontSize: 12,
         marginTop: 40
     }
 }
 
-export default UserContentStyle;
+export default OrderContentStyle;

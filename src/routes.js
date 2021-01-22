@@ -13,6 +13,7 @@ import AdminConsole from "components/admin";
 import RestaurantContent from "components/admin/restaurant_content/RestaurantContent";
 import RestaurantInfo from "components/admin/restaurant_content/RestaurantInfo";
 import UserContent from "components/admin/user_content/UserContent";
+import OrderContent from "components/admin/order_content/index";
 
 // Merchant Admin
 import RestaurantSummary from "components/admin-merchant/Summary";
@@ -31,10 +32,11 @@ const route = {
         { path: '/merchant-register', component: <MerchantRegister />}
     ],
     admin: [
-        { path: '/admin/home', component: <AdminConsole /> },
+        { path: '/admin', component: <AdminConsole /> },
         { path: '/admin/restaurant', component: <RestaurantContent /> },
         { path: '/admin/restaurant/detail', component: <RestaurantInfo /> },
-        { path: '/admin/user', component: <UserContent /> }
+        { path: '/admin/user', component: <UserContent /> },
+        { path: '/admin/order', component: <OrderContent /> }
     ],
     merchant: [
         { path: '/merchant-admin', component: <RestaurantSummary />},

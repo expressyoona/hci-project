@@ -42,6 +42,40 @@ const HomeStyle = {
         color: '#000',
         fontSize: '16px',
         marginLeft: '15px',
+    },
+
+    // Best Restaurant
+    res: {
+        backgroundColor: '#7FAD39',
+        borderRadius: '12px',
+        paddingBottom: '10px'
+    },
+    resImage: {
+        height: '190px',
+        borderRadius: 12
+    },
+    resName: {
+        color: '#000000',
+        fontSize: '18px',
+        marginLeft: '15px',
+        fontWeight: "bold"
+    },
+    resAddress: {
+        color: '#000',
+        fontSize: '12px',
+        paddingLeft: '15px',
+    },
+    resTime: {
+        padding: 5,
+        fontSize: 20,
+        fontWeight: "bold",
+        marginRight: 5,
+        color: "#3a38de"
+    },
+    resDiscount: {
+        color: "#b11464",
+        fontSize: 20,
+        fontWeight: "bold",
     }
 }
 
