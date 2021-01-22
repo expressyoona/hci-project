@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, Typography, Row, Col } from "antd";
 
 import HomeStyle from "./styles";
+import BestRestaurant from './BestRestaurant';
 import AreYouHungry from './AreYouHungry';
 import MerchantRegistrationProcess from "./MerchantRegistrationProcess";
 import ShipperRegistration from "./ShipperRegistration";
@@ -12,6 +13,7 @@ const Home = () => {
 
     return (
         <>
+            <BestRestaurant />
             <AreYouHungry />
             <Typography>
                 <Title style={HomeStyle.title}>Sử dụng Là Sao như thế nào ?</Title>
