@@ -19,7 +19,7 @@ const Home = () => {
         <>
             <AreYouHungry />
             <Typography>
-                <Title style={HomeStyle.title}>Sử dụng .............. như thế nào ?</Title>
+                <Title style={HomeStyle.title}>Sử dụng Là Sao như thế nào ?</Title>
                 <Title style={{...HomeStyle.title, ...HomeStyle.title2}}>VÔ CÙNG DỄ DÀNG</Title>
             </Typography>
             <Row>
