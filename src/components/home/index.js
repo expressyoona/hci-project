@@ -1,7 +1,5 @@
 import React from 'react';
 import { Image, Typography, Row, Col } from "antd";
-import { useSelector } from "react-redux";
-
 
 import HomeStyle from "./styles";
 import AreYouHungry from './AreYouHungry';
@@ -11,9 +9,6 @@ import ShipperRegistration from "./ShipperRegistration";
 const Home = () => {
 
     const { Title } = Typography;
-
-    const auth = useSelector(state => state.user);
-    // console.log(auth);
 
     return (
         <>
