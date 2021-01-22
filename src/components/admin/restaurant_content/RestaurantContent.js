@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Input, Typography, Button, Tabs, Divider, Pagination } from "antd";
 
+import MerchantService from "services/MerchantService";
 import RestaurantContentStyle from "./style";
 import RestaurantItem from "./RestaurantItem";
 
@@ -96,6 +97,20 @@ const RestaurantContent = () => {
         //console.log(data);
         return (data)
     }
+
+    const handleData = snapshot => {
+        snapshot.forEach(item => {
+            console.log(item.val());
+        })
+    }
+
+    useEffect(() => {
+        MerchantService.getByStatus('pending').once('value', handleData);
+
+        return () => {
+            MerchantService.getByStatus('pending').once('value', handleData);
+        }
+    }, []);
 
     return (
         <>

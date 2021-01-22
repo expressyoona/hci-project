@@ -11,7 +11,8 @@ import MerchantRegister from "components/merchant";
 import AdminConsole from "components/admin";
 
 // Merchant Admin
-import MerchantAdmin from "components/admin-merchant";
+import MerchantPortal from "components/admin-merchant";
+import MerchantLogin from "components/admin-merchant/MerchantLogin";
 
 const route = {
     general: [
@@ -27,7 +28,8 @@ const route = {
         { path: '/admin', component: <AdminConsole /> }
     ],
     merchant: [
-        { path: '/merchant-admin', component: <MerchantAdmin />}
+        { path: '/merchant-admin/home', component: <MerchantPortal />},
+        { path: '/merchant-admin', component: <MerchantLogin />}
     ]
 }
 
