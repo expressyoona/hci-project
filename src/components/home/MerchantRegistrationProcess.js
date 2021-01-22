@@ -49,9 +49,9 @@ const MerchantRegistrationProcess = () => {
                     renderItem={item => (
                         <List.Item>
                             <Space direction="vertical" size="large">
-                                <Image src={item.img} />
-                                <Image src={item.text} />
-                                <Image src={item.detail} />
+                                <Image preview={false} src={item.img} />
+                                <Image preview={false} src={item.text} />
+                                <Image preview={false} src={item.detail} />
                             </Space>
                         </List.Item>
                     )}

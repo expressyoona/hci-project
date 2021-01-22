@@ -1,5 +1,6 @@
 import React from "react";
 import { Breadcrumb, Typography, Space } from "antd";
+import { Link } from "react-router-dom";
 
 import RestaurantContentStyle from "./style";
 import Info from "./Info";
@@ -63,8 +64,8 @@ const RestaurantInfo = () => {
     return (
         <div style={RestaurantInfoStyle.root}>
             <Breadcrumb>
-                <Breadcrumb.Item href="admin/restaurant">Cửa hàng</Breadcrumb.Item>
-                <Breadcrumb.Item href="" style={RestaurantInfoStyle.breadcrumb}>Thông tin</Breadcrumb.Item>
+                <Breadcrumb.Item><Link to={{pathname: "../restaurant"}}>Cửa hàng</Link></Breadcrumb.Item>
+                <Breadcrumb.Item style={RestaurantInfoStyle.breadcrumb}>Thông tin</Breadcrumb.Item>
             </Breadcrumb>
             <div style={RestaurantInfoStyle.infomation}>
                 {data.map(item => {

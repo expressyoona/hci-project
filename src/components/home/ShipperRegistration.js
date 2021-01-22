@@ -21,7 +21,7 @@ const ShipperRegistration = () => {
                 <br/>Đăng ký tham gia ngay với nút “ĐĂNG KÝ NGAY” phía dưới hoặc gửi Email qua jobs@heheheehehe.vn - hoặc gọi qua số điện thoại 0123456789.</Paragraph>
             </Col>
             <Col span={4}>
-                <Image src="images/home/guide_shipper.png" />
+                <Image preview={false} src="images/home/guide_shipper.png" />
             </Col>
         </Row>
         <Row justify="center">

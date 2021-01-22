@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "antd";
-import { Pie } from 'react-chartjs-2';
+// import { Pie } from 'react-chartjs-2';
 import { BarChartOutlined } from "@ant-design/icons";
 
 const Summary = () => {
@@ -60,7 +60,7 @@ const Summary = () => {
                 <Row>
                     <Col span={12}>Doanh thu hôm nay</Col>
                     <Col span={12}>
-                        <Pie data={data} width={150} height={150} options={{ maintainAspectRatio: false }} />
+                        {/* <Pie data={data} width={150} height={150} options={{ maintainAspectRatio: false }} /> */}
                     </Col>
                 </Row>
             </Col>

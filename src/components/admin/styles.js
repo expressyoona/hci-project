@@ -59,6 +59,9 @@ const SiderStyle = {
         letterSpacing: "0.05em"
         
     },
+    siderItemLink: {
+        color: "#72777A",
+    },
     lastMenuItem: {
         position: "absolute",
         display: 'flex',

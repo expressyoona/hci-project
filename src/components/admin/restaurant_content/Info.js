@@ -56,7 +56,7 @@ const Info = ({Item}) => {
     if (Accept === false) {
         return (
             <div style={RestaurantInfoStyle.info}>
-                <Image style={RestaurantInfoStyle.infoImg} preview={false} src={"http://localhost:3000/images/restaurant/" + Img} />
+                <Image style={RestaurantInfoStyle.infoImg} preview={false} src={"/images/restaurant/" + Img} />
                 <div style={{marginLeft: 70, position: "relative"}}>
                     <table style={RestaurantInfoStyle.table}>
                         <tr style={RestaurantInfoStyle.tr}>
@@ -88,7 +88,7 @@ const Info = ({Item}) => {
                             <Radio value={2}>Đã tồn tại cửa hàng trên hệ thống</Radio><br/>
                             <Radio value={3}>Cửa hàng cùi</Radio><br/>
                             <Radio value={4}>Cửa hàng không đạt yêu cầu</Radio><br/>
-                            <Radio value={5}>Khác: <Input style={{ width: 100, marginLeft: 10 }} /></Radio>
+                            <Radio value={5}>Khác: <Input style={{ width: 300, marginLeft: 10 }} /></Radio>
                         </Radio.Group>
                     </Modal>
                 </div>
@@ -102,7 +102,7 @@ const Info = ({Item}) => {
     else {
         return (
             <div style={RestaurantInfoStyle.info}>
-                <Image style={RestaurantInfoStyle.infoImg} preview={false} src={"http://localhost:3000/images/restaurant/" + Img} />
+                <Image style={RestaurantInfoStyle.infoImg} preview={false} src={"/images/restaurant/" + Img} />
                 <div style={{marginLeft: 70, position: "relative"}}>
                     <tr style={RestaurantInfoStyle.tr}>
                         <td style={RestaurantInfoStyle.td}><Title style={RestaurantInfoStyle.infoTitle}>{Name}</Title></td>
