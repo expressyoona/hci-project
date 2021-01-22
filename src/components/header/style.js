@@ -7,8 +7,8 @@ const HeaderStyle = {
         marginBottom: '50px'
     },
     logo: {
-        width: '126px', 
-        height: '40px',
+        width: '50px', 
+        height: '50px',
         marginRight: '30px'
     },
     loginBtn: {
