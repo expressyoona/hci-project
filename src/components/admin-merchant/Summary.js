@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Divider, Layout, Card, Col, Row, Typography, DatePicker } from "antd";
-// import { Pie } from 'react-chartjs-2';
 import { ArrowDownOutlined, ArrowUpOutlined, BarChartOutlined } from "@ant-design/icons";
 import { Area, Pie } from '@ant-design/charts';
 
