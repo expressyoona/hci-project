@@ -14,8 +14,9 @@ import AdminRestaurant from "components/admin/restaurant_content/index";
 import AdminRestaurantInfo from "components/admin/restaurant_content/indexInfo";
 
 // Merchant Admin
-import MerchantPortal from "components/admin-merchant";
+import RestaurantSummary from "components/admin-merchant/Summary";
 import MerchantLogin from "components/admin-merchant/MerchantLogin";
+import OrderTable from "components/admin-merchant/OrderManagement";
 
 const route = {
     general: [
@@ -33,8 +34,9 @@ const route = {
         { path: '/admin/restaurant/detail', component: <AdminRestaurantInfo /> }
     ],
     merchant: [
-        { path: '/merchant-admin/home', component: <MerchantPortal />},
-        { path: '/merchant-admin', component: <MerchantLogin />}
+        { path: '/merchant-admin', component: <RestaurantSummary />},
+        { path: '/merchant-admin/order', component: <OrderTable />},
+        { path: '/merchant-admin/login', component: <MerchantLogin />}
     ]
 }
 

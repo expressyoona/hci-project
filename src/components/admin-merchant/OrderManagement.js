@@ -1,7 +1,13 @@
-import React, { useEffect } from "react";
-import { Button, Table } from "antd";
+import React from "react";
+import { Input, Layout, Button, Table } from "antd";
+
+import MerchantHeader from "./MerchantHeader";
+import MerchantSider from "./MerchantSider";
+import { Link } from "react-router-dom";
 
 const OrderTable = () => {
+
+    const { Content } = Layout;
 
     const data = [
         { key: 1, orderId: '#123', orderStatus: 'Đang chờ', consumerName: 'Minh Hoàng', consumerAddress: 'Ngũ Hành Sơn', orderTime: '22/01/2021 15:56', waitingTime: '15 phút'},
@@ -21,7 +27,7 @@ const OrderTable = () => {
         { title: 'Thời gian đặt hàng', key: 'orderTime', dataIndex: 'orderTime' },
         { title: 'Thời gian đã chờ', key: 'waitingTime', dataIndex: 'waitingTime' },
         { title: 'Chi tiết', key: 'detail', dataIndex: 'detail', render: () => (
-            <a>Chi tiết</a>
+            <Link to="???">Chi tiết</Link>
         )},
         { title: 'Thao tác', key: 'action', render: () => (
             <>
@@ -38,26 +44,34 @@ const OrderTable = () => {
     }
 
     return (
-        <>
-        <Table
-            dataSource={data}
-            columns={columns}
-            pagination={{position: ['bottomCenter']}}
-            title={() => <TableHeader title="Đơn mới" />}
-        />
-        <Table
-            dataSource={data}
-            columns={columns}
-            pagination={{position: ['bottomCenter']}}
-            title={() => <TableHeader title="Đơn đã nhận" />}
-        />
-        <Table
-            dataSource={data}
-            columns={columns}
-            pagination={{position: ['bottomCenter']}}
-            title={() => <TableHeader title="Đơn đã hủy" />}
-        />
-        </>
+        <Layout>
+            <MerchantSider />
+            <Layout>
+                <MerchantHeader />
+                <Content style={{marginLeft: 320, marginTop: 82}}>
+                    <Button>Xem toàn bộ đơn hàng</Button>
+                    <Input placeholder="Tìm đơn hàng" />
+                    <Table
+                        dataSource={data}
+                        columns={columns}
+                        pagination={{position: ['bottomCenter']}}
+                        title={() => <TableHeader title="Đơn mới" />}
+                    />
+                    <Table
+                        dataSource={data}
+                        columns={columns}
+                        pagination={{position: ['bottomCenter']}}
+                        title={() => <TableHeader title="Đơn đã nhận" />}
+                    />
+                    <Table
+                        dataSource={data}
+                        columns={columns}
+                        pagination={{position: ['bottomCenter']}}
+                        title={() => <TableHeader title="Đơn đã hủy" />}
+                    />
+                </Content>
+            </Layout>
+        </Layout>
     )
 
 }

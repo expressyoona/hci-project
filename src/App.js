@@ -6,6 +6,7 @@ import {
 
 import Header from "components/header";
 import Footer from "components/footer";
+import PageNotFound from "components/404";
 import route from "routes";
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
             {item.component}
           </Route>
         ))}
+        <Route component={PageNotFound} />
       </Switch>
       
     </Router>
