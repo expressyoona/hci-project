@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
 import { Row, Col, Input, Button, Form, Checkbox, Typography, Space } from "antd";
+import { useDispatch } from "react-redux";
 
+import { signInWithGoogle, signInWithFacebook } from "config/firebase-db";
 import LoginFormStyle from "./style";
 
 const LoginForm = () => {
 
     const { Text } = Typography;
     const [rememberMe, setRememberMe] = useState(true);
+    const dispath = useDispatch();
+
+    const loginSuccess = (user) => {
+        // console.log(user);
+        dispath({ type: 'USER_LOGGED_IN', payload: user})
+    }
+
+    const loginFailed = (error) => {
+        console.log('Error when logged in: ', error);
+    }
 
     return (
         <Row >
@@ -14,8 +26,8 @@ const LoginForm = () => {
                 <Text style={LoginFormStyle.title}>Đăng ký</Text>
                 <Space direction="vertical" style={{border: '20px'}}>
                     <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.phoneLoginBtn }}>SỐ ĐIỆN THOẠI</Button>
-                    <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.facebookLoginBtn}}>Facebook</Button>
-                    <Button style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.googleLoginBtn}}>Google</Button>
+                    <Button onClick={() => signInWithFacebook(loginSuccess, loginFailed)} style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.facebookLoginBtn}}>Facebook</Button>
+                    <Button onClick={() => signInWithGoogle(loginSuccess, loginFailed)} style={{...LoginFormStyle.quickLoginBtn, ...LoginFormStyle.googleLoginBtn}}>Google</Button>
                 </Space>
                 <Text style={{margin: '20px 0'}}>Hoặc đăng nhập bằng tài khoản của bạn</Text>
                 <Form>

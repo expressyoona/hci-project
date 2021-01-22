@@ -19,6 +19,7 @@ import RestaurantSummary from "components/admin-merchant/Summary";
 import MerchantLogin from "components/admin-merchant/MerchantLogin";
 import OrderTable from "components/admin-merchant/OrderManagement";
 
+
 const route = {
     general: [
         { path: '/', component: <Home /> },

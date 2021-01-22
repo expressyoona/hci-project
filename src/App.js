@@ -3,8 +3,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
 import { Layout } from "antd";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+
+// Redux
+import rootReducer from "reducers";
+
 
 // Admin
 import AdminHeader from "components/admin/AdminHeader";
@@ -19,9 +24,12 @@ import route from "routes";
 
 const App = () => {
 
+  const enableReduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__?.();
+  const store = createStore(rootReducer, enableReduxDevTools);
   const { Content } = Layout;
 
   return (
+    <Provider store={store}>
     <Router>
       <Switch>
         {/* Admin */}
@@ -61,6 +69,7 @@ const App = () => {
       </Switch>
       
     </Router>
+    </Provider>
   );
 }
 
