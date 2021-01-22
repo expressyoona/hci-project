@@ -4,6 +4,10 @@ const UserContentStyle = {
     },
     breadcrumb: {
         fontWeight: "bold"
+    },
+    table: {
+        fontSize: 12,
+        marginTop: 40
     }
 }
 

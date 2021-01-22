@@ -7,10 +7,6 @@ import RestaurantContentStyle from "./style";
 import RateSummary from "components/restaurant/RateSummary";
 import RestaurantStyle from "components/restaurant/style";
 
-const openNotification = () => {
-    
-};
-
 const Info = ({Item}) => {
 
     const { Img, Name, Address, Representater, PhoneNumber, Email, Cuisine, Status, Time } = Item;
