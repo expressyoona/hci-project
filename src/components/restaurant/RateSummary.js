@@ -11,7 +11,6 @@ const RateSummary = () => {
     return (
         <Row>
             <Col span={24}>
-                <Title style={RestaurantStyle.revTitle}>Đánh giá</Title>
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <Space style={RestaurantStyle.revp}>
                         <div style={{marginRight: 44, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>

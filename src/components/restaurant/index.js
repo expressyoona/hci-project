@@ -48,7 +48,7 @@ const data = [
 
 const Restaurant = () => {
 
-    const { Text } = Typography;
+    const { Text, Title } = Typography;
 
     return (
         <>
@@ -84,6 +84,7 @@ const Restaurant = () => {
             </Col>
         </Row>
         <RestaurantMenu />
+        <Title style={RestaurantStyle.revTitle}>Đánh giá</Title>
         <RateSummary />
         </>
     )

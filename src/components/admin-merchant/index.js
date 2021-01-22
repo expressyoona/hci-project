@@ -10,7 +10,7 @@ import Summary from "./Summary";
 
 const MerchantPortal = () => {
 
-    const { Header, Sider, Content } = Layout;
+    const { Content } = Layout;
 
     return (
         <Layout>

@@ -3,7 +3,8 @@ import { Layout } from "antd";
 
 import AdminSider from "./AdminSider";
 import AdminHeader from "./AdminHeader";
-import RestaurantContent from "./restaurant_content/RestaurantContent";
+// import RestaurantContent from "./restaurant_content/RestaurantContent";
+import RestaurantInfo from "./restaurant_content/RestaurantInfo";
 import AdminStyle from "./styles";
 // import firebase from "config/firebase-db";
 
@@ -22,7 +23,7 @@ const AdminConsole = () => {
             <Layout>
                 <AdminHeader />
                 <Content style={AdminStyle.ContentRoot}>
-                    <RestaurantContent />
+                    <RestaurantInfo />
                 </Content>
             </Layout>
         </Layout>
