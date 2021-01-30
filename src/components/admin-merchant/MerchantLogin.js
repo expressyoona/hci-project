@@ -34,7 +34,7 @@ const MerchantLogin = () => {
                             <Button style={{width: 540, height: 35, background: '#7FAD39', color: '#fff'}}>ĐĂNG NHẬP</Button>
                         </Form.Item>
                         <Form.Item>
-                            <Button onClick={signInWithGoogle} style={{width: 540, height: 35, background: '#DB4437', color: '#fff'}} icon={<Image width={30} preview={false} src="images/google.png" />}>GOOGLE</Button>
+                            <Button onClick={signInWithGoogle} style={{width: 540, height: 35, background: '#DB4437', color: '#fff'}} icon={<Image width={30} preview={false} src="/images/google.png" />}>GOOGLE</Button>
                         </Form.Item>
                         <Typography.Paragraph style={{textAlign: 'center'}}>
                             Chúng tôi không sử dụng thông tin của bạn với bất kỳ mục đích nào. Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với Chính sách quy định của ...

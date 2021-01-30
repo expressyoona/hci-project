@@ -18,7 +18,7 @@ const MenuItem = ({ Img, Name, Order, Price }) => {
                 </div>
                 <div style={{right: "0px", position: "absolute"}}>
                     <Text style={RestaurantStyle.menuItemPrice}>{Price}</Text>
-                    <Image src="images/restaurant/AddButton.svg" preview={false} />
+                    <Image src="/images/restaurant/AddButton.svg" preview={false} />
                 </div>
         </div>
 

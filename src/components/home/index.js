@@ -21,7 +21,7 @@ const Home = () => {
             </Typography>
             <Row>
                 <Col span={16} offset={4}>
-                    <Image preview={false} src="images/home/purchasing-process.png"/>
+                    <Image preview={false} src="/images/home/purchasing-process.png"/>
                 </Col>
             </Row>
             <MerchantRegistrationProcess />

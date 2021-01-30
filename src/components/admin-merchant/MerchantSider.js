@@ -14,7 +14,7 @@ const MerchantSider = () => {
     return (
         <Sider trigger={null} collapsible theme="light" width={320} style={SiderStyle.root}>
             <div style={SiderStyle.siderLogo}>
-                <img src="images/logo.png" alt="Logo in Sider" style={SiderStyle.siderImgLogo} />
+                <img src="/images/logo.png" alt="Logo in Sider" style={SiderStyle.siderImgLogo} />
             </div>
             <Menu defaultSelectedKeys={["1"]}>
                 <Menu.Item key="1" icon={<HomeTwoTone style={SiderStyle.siderIcon} />} style={SiderStyle.siderItem}>

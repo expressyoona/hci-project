@@ -57,13 +57,13 @@ const Header = () => {
                 <Search size={"large"} bordered allowClear="true" style={{width: '250%'}} placeholder="Nhập tên món ăn bạn muốn tìm" />
                 </Space>
                 <Space size={25} style={{float: 'right'}}>
-                    <img src="images/notification.png" alt="Notification" height="20" />
-                    <img src="images/cart.png" alt="Cart" height="20" />
+                    <img src="/images/notification.png" alt="Notification" height="20" />
+                    <img src="/images/cart.png" alt="Cart" height="20" />
                     {user && user.isLogged ? <Dropdown overlay={menu}><Avatar size={52} src={user.user.photoURL} alt="User avatar" /></Dropdown> : <Button href="/login" style={HeaderStyle.loginBtn}>Đăng nhập</Button>}
                 </Space>
             </Col>
             <Col span={4}>
-            <img src="images/en.png" alt="English" style={HeaderStyle.lang}/>
+                <img src="/images/en.png" alt="English" style={HeaderStyle.lang}/>
             </Col>
         </Row>
     )
