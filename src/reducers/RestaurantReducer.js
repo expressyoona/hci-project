@@ -5,9 +5,15 @@ const restaurantReducer = (state=INITIAL_STATE, action) => {
         case 'LOADED_RESTAURANT': {
             const result = {
                 ...state,
-                ...action.payload
+                restaurant: action.payload
             }
             return result;
+        }
+        case 'LOADED_TOP_RESTAURANT': {
+            return {
+                ...state,
+                topRestaurant: action.payload
+            }
         }
         default: return state;
     }

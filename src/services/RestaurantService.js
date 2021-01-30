@@ -1,9 +1,10 @@
 import firebase from "config/firebase-db";
 
-const db = firebase.database().ref('/restaurant/xcvxcvxcv/menu/type/xcjvhxciv');
+// const db = firebase.database().ref('/restaurant/xcvxcvxcv/menu/type/xcjvhxciv');
+const db = firebase.database().ref('/restaurant');
 
 const getAll = () => {
-    return db;
+    return db.orderByChild('status').equalTo('pending');
 }
 
 const create = data => {

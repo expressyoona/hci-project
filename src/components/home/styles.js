@@ -51,7 +51,7 @@ const HomeStyle = {
         paddingBottom: '10px'
     },
     resImage: {
-        height: '190px',
+        // height: '190px',
         borderRadius: 12
     },
     resName: {

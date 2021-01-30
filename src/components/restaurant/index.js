@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import { Breadcrumb, Row, Col, Typography, List } from "antd";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import MerchantService from "services/MerchantService";
@@ -53,7 +53,7 @@ const Restaurant = () => {
 
     const { Text, Title } = Typography;
 
-    const restaurant = useSelector(state => state.restaurant);
+    const { restaurant } = useSelector(state => state.restaurant);
     const dispatch = useDispatch();
     const { slug } = useParams();
     
@@ -78,9 +78,13 @@ const Restaurant = () => {
         <Row style={{padding: "0 0 15px 15px"}}>
             <Col span={16} offset={4}>
                 <Breadcrumb>
-                    <Breadcrumb.Item>Trang chủ</Breadcrumb.Item>
-                    <Breadcrumb.Item>Cửa hàng</Breadcrumb.Item>
-                    <Breadcrumb.Item href="" style={RestaurantStyle.breadcrumb}>{restaurant.restaurantName}</Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        <Link to="/">Trang chủ</Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                        <Link to="/restaurant">Cửa hàng</Link>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item style={RestaurantStyle.breadcrumb}>{restaurant && restaurant.restaurantName}</Breadcrumb.Item>
                 </Breadcrumb>
             </Col>
         </Row>

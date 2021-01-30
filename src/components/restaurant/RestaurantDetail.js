@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Image, Typography, Rate, Space } from "antd";
+import { Row, Col, Image, Typography, Rate, Space, Skeleton } from "antd";
 import { ClockCircleTwoTone, DollarCircleTwoTone, FacebookFilled } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 
@@ -7,8 +7,8 @@ import RestaurantStyle from "./style";
 
 const RestaurantDetail = () => {
 
-    const restaurant = useSelector(state => state.restaurant);
-    console.log('res',restaurant);
+    const { restaurant } = useSelector(state => state.restaurant);
+    // console.log('res',restaurant);
 
     const { Text, Title } = Typography;
     
@@ -21,8 +21,12 @@ const RestaurantDetail = () => {
             <Col span={8}>
                 <Space direction="vertical" style={{width: '100%'}}>
                     <Text style={RestaurantStyle.resType} >Coffee/Dessert</Text>
-                    <Title style={RestaurantStyle.resName}>{restaurant.restaurantName}</Title>
-                    <Text strong >{restaurant.address}</Text>
+                    {restaurant ? 
+                        <>
+                            <Title style={RestaurantStyle.resName}>{restaurant.restaurantName}</Title>
+                            <Text strong >{restaurant.address}</Text>
+                        </> :
+                    <Skeleton style={{ width: 200 }} paragraph={{ rows: 2 }}/>}
                     <div>
                         <Rate disabled defaultValue={5} />
                         <Text style={RestaurantStyle.resReviewCount}>(18 đánh giá)</Text>
