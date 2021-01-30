@@ -15,7 +15,7 @@ const RestaurantItem = ({ data }) => {
     return (
         <Space direction="vertical" size={5} style={HomeStyle.res}>
             <Link to={`/restaurant/${data && data.slug}`}>
-                <Image src={data && data.img ? "images/restaurant/" : "images/restaurant/StarBuck.png"} preview={false} style={HomeStyle.resImage} />
+                <Image src={data && data.img ? "images/restaurant/" : "images/restaurant/Starbuck.png"} preview={false} style={HomeStyle.resImage} />
             </Link>
             <Text style={HomeStyle.resName}>
                 <Link to={`/restaurant/${data && data.slug}`} style={{color: "#000000"}}>{data && data.restaurantName}</Link>
